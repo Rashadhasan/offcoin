@@ -1,2 +1,3 @@
 class MerchantCategory < ApplicationRecord
+	
 end

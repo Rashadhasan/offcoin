@@ -85,6 +85,8 @@ ActiveRecord::Schema.define(version: 20171102114321) do
     t.string "name"
     t.text "address"
     t.integer "aread_id"
+    t.integer "category_id"
+    t.integer "merchant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
