@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102110902) do
+ActiveRecord::Schema.define(version: 20171102114321) do
 
   create_table "areas", force: :cascade do |t|
     t.string "name"
@@ -28,8 +28,31 @@ ActiveRecord::Schema.define(version: 20171102110902) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "locations", force: :cascade do |t|
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "outlet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "merchant_categories", force: :cascade do |t|
     t.string "category_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "merchant_logins", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "merchant_offers", force: :cascade do |t|
+    t.integer "merchant_id"
+    t.string "offername"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -49,6 +72,14 @@ ActiveRecord::Schema.define(version: 20171102110902) do
     t.integer "like_count"
     t.integer "share_count"
     t.integer "area_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "outlets", force: :cascade do |t|
+    t.string "name"
+    t.text "address"
+    t.integer "aread_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
