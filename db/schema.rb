@@ -53,6 +53,11 @@ ActiveRecord::Schema.define(version: 20171102114321) do
   create_table "merchant_offers", force: :cascade do |t|
     t.integer "merchant_id"
     t.string "offername"
+    t.integer "days"
+    t.datetime "offer_start_at"
+    t.datetime "offer_end_at"
+    t.datetime "offer_start_time"
+    t.datetime "offer_end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
