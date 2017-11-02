@@ -1,0 +1,2 @@
+class MerchantLogin < ApplicationRecord
+end

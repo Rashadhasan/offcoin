@@ -1,0 +1,2 @@
+class MerchantOffer < ApplicationRecord
+end

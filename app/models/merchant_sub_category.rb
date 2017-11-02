@@ -1,0 +1,2 @@
+class MerchantSubCategory < ApplicationRecord
+end
